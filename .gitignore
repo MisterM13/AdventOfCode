@@ -1,4 +1,5 @@
 *.txt
 *.class
 *.csv
+*.numbers
 .DS_Store
