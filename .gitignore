@@ -1,1 +1,4 @@
 *.txt
+*.class
+*.csv
+.DS_Store
