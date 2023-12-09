@@ -5,7 +5,7 @@ input = f.read()
 
 #input = "32T3K 765\nT55J5 684\nKK677 28\nKTJJT 220\nQQQJA 483"
 #input = "2346J 1\n3JJ25 2\n9JJJJ 7\nJ32JJ 4\nJJJJJ 5\n77788 3\n7JJ7J 6"
-input = "9JJJJ 6\n88JJJ 5\nJ99JJ 4\nJ98J2 3\n234JJ 1\n22888 2"
+input = "9JJJJ 6\n88JJJ 5\nJ99JJ 4\nJ98J2 3\n234JJ 1\n22888 2\nJ2345 1"
 
 input = input.split("\n")
 
@@ -38,7 +38,7 @@ def getVal(char):
 		return 13
 
 def getPair(valarr):
-	print(valarr)
+	#print(valarr)
 	pair = []
 	j = 0
 	for i in range(1,len(valarr)):
