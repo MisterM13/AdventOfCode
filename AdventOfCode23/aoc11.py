@@ -3,7 +3,7 @@
 f = open("input11.txt", "r")
 input = f.read()
 
-#input = "...#......\n.......#..\n#.........\n..........\n......#...\n.#........\n.........#\n..........\n.......#..\n#...#....."
+input = "...#......\n.......#..\n#.........\n..........\n......#...\n.#........\n.........#\n..........\n.......#..\n#...#....."
 
 map = input.split("\n")
 
@@ -16,7 +16,7 @@ def getGalaxies():
 	return coordinates
 
 def step(pos1,pos2,l):
-	sv = 999999 #stretch value
+	sv = 99 #stretch value x-1 -> 99 = 100 Times lager
 	x1 = pos1[0]
 	x2 = pos2[0]
 	y1 = pos1[1]
