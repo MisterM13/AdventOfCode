@@ -29,16 +29,16 @@ def checkCond(map,cond):
 		valid = False
 	return valid
 		
-#def makeGuess(map,cond):
-#	cond = cond.split(",")
-#	x = map.split(".")
-#	x = list(filter(lambda a: a is not None and a != "", x))
-#	cond = cond.sort(reverse = True)
-#	for c in cond:
-#		for i in x:
-#			if len(i) == int(c):
-#				cond.remove(c)
-#				x.remove(i)
+def makeGuess(map,cond):
+	cond = cond.split(",")
+	x = map.split(".")
+	x = list(filter(lambda a: a is not None and a != "", x))
+	cond = cond.sort(reverse = True)
+	for c in cond:
+		for i in x:
+			if len(i) == int(c):
+				cond.remove(c)
+				x.remove(i)
 
 def getPos(map):
 	pos = []
@@ -69,7 +69,7 @@ def bruteGuess(map,pos,cond):
 	return c
 	
 for i in range(len(map)):
-	map[i]=map[i]+map[i]+map[i]+map[i]+map[i]
+	map[i]=map[i]+"?"+map[i]+"?"+map[i]+"?"+map[i]+"?"+map[i]
 	cond[i]=cond[i]+","+cond[i]+","+cond[i]+","+cond[i]+","+cond[i]
 
 print(map)
@@ -77,5 +77,9 @@ print(cond)
 c = 0
 for i in range(len(map)):
 	print(i, "of",len(map))
-	c+= bruteGuess(map[i], getPos(map[i]),cond[i])
-print(c)
+	b = bruteGuess(map[i], getPos(map[i]),cond[i])
+	print(b,"Arrangments")
+	c+= b
+	#print(c)
+
+	#print(bruteGuess(map[3], getPos(map[3]),cond[3]))
