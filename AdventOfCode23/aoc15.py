@@ -8,6 +8,7 @@ input = f.read()
 
 initSeq = input.split(",")
 boxes = [[]]*256
+nr = 0
 
 def hashString(str):
 	value = 0
@@ -30,6 +31,7 @@ def boxOp(instr):
 	global boxes
 	replaced = False
 	if len(instr.split("=")) > 1:
+		#print(instr, "=")
 		#print("=")
 		x = instr.split("=")
 		y = " ".join(x)
@@ -45,6 +47,7 @@ def boxOp(instr):
 			else:
 				boxes[boxnr].append(y)
 	else:
+		#print(instr, "-")
 		x = instr.split("-")[0]
 		boxnr = hashString(x)
 		for i in boxes[boxnr]:
@@ -53,11 +56,15 @@ def boxOp(instr):
 
 def focusPower(i):
 	global boxes
+	global nr
 	pow = 0
 	x = boxes[i]
 	for j in range(len(x)):
 		val = int(x[j].split(" ")[1])
 		pow += (i+1)*(j+1)*val
+		print((i+1),(j+1),val,(i+1)*(j+1)*val)
+	if pow >0:
+		nr+=1
 	return pow
 
 
@@ -68,6 +75,7 @@ def b():
 	print(boxes)
 	for b in range(len(boxes)):
 		sum += focusPower(b)
+	
 	print("Sum:",sum)
 	
 b()
