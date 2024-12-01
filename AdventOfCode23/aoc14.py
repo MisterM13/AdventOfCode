@@ -153,6 +153,7 @@ bilPat = ""
 load = []
 for i in range(1000):
 	pat = shiftCycle(p)
+	#printPattern(pat, "Pat")
 	found = False
 	for v in versions:
 		if pat == v:
@@ -165,7 +166,7 @@ for i in range(1000):
 				load.append(getLoad(bilPat))
 				c[0]=0
 				#print("Load:", getLoad(bilPat))
-			#printPattern(pat, "Pat")
+				#printPattern(pat, "Pat")
 			#printPattern(v, "V")
 			found = True
 			versions = []

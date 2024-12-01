@@ -2,4 +2,4 @@
 *.class
 *.csv
 *.numbers
-.DS_Store
+*.DS_Store
