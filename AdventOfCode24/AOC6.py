@@ -88,7 +88,7 @@ def move(intmap,pos):
 		xi = 1
 	elif i== 3:
 		yi =-1
-	if x+xi < xmax and y+yi < ymax and x+xi >=0 and y+yi >=0 :
+	if x+xi < xmax and y+yi < ymax and x+xi >=0 and y+yi >=0:
 		if intmap[x+xi,y+yi] < 1:
 			pos = (x,y,(i+1)%4)
 			return (intmap, pos)
